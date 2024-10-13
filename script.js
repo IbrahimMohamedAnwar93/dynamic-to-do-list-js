@@ -1,6 +1,6 @@
-// Step 1: Setup Event Listener for Page Load
+// Setup Event Listener for Page Load
 document.addEventListener("DOMContentLoaded", function () {
-  // Step 2: Select DOM Elements
+  // Select DOM Elements
   const addButton = document.getElementById("add-task-btn");
   const taskInput = document.getElementById("task-input");
   const taskList = document.getElementById("task-list");
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     storedTasks.forEach((taskText) => addTask(taskText, false)); // Load tasks without saving again
   }
 
-  // Step 3: Create the addTask Function
+  // Create the addTask Function
   function addTask(taskText, save = true) {
     // Create a new list item only if taskText is provided
     if (taskText) {
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Step 4: Attach Event Listeners
+  // Attach Event Listeners
   addButton.addEventListener("click", function () {
     addTask(taskInput.value.trim()); // Add the trimmed task
   }); // Add task on button click
